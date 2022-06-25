@@ -7,10 +7,10 @@ import { User } from './entities/users.entities';
 export class UsersService {
   users: User[] = [];
 
-  getAll() {
+  getAll(): User[] {
     return this.users;
   }
-  create(createUserDto: CreateUserDto) {
+  create(createUserDto: CreateUserDto): User {
     const newUser = {
       id: uuid(),
       ...createUserDto,
